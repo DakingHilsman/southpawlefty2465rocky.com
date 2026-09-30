@@ -1,0 +1,48 @@
+;;
+;; Domain:     dakinghilsman.uk.
+;; Exported:   2026-07-14 22:07:41
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+dakinghilsman.uk	3600	IN	SOA	quinton.ns.cloudflare.com. dns.cloudflare.com. 2053573346 10000 2400 604800 3600
+
+;; NS Records
+dakinghilsman.uk.	86400	IN	NS	quinton.ns.cloudflare.com.
+dakinghilsman.uk.	86400	IN	NS	tessa.ns.cloudflare.com.
+
+;; CNAME Records
+dakinghilsman.uk.	1	IN	CNAME	d-8rs.pages.dev. ; cf_tags=cf-proxied:false
+www.dakinghilsman.uk.	1	IN	CNAME	public.r2.dev. ; cf_tags=cf-proxied:true
+
+;; MX Records
+dakinghilsman.uk.	3600	IN	MX	10 mx01.mail.icloud.com.
+dakinghilsman.uk.	3600	IN	MX	10 mx02.mail.icloud.com.
+
+;; TXT Records
+dakinghilsman.uk.	1	IN	TXT	"v=spf1 -all"
+dakinghilsman.uk.	1	IN	TXT	"v=spf1 ip4:172.64.32.0 +all"
+dakinghilsman.uk.	3600	IN	TXT	"v=spf1 ip4:100.101.102.103 include:DaKingHilsman.uk ip4:100.69.134.124 include:DaKingHilsman.Uk include:icloud.com ~all"
+dakinghilsman.uk.	3600	IN	TXT	"apple-domain=Vo8g3umKiFMeAKKt"
+_dmarc.dakinghilsman.uk.	1	IN	TXT	"v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s; rua=mailto:jacoreydakinghilsman@gmail.com,mailto:jacoreyhilsman@gmail.com,mailto:coreyhilsman@gmail.com,mailto:monicamanning2918@gmail.com,mailto:jacorey@dakinghilsman.spike.team"
+_dmarc.dakinghilsman.uk.	1	IN	TXT	"v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s; rua=mailto:32fe3107c2614841a860715816de3cc1@dmarc-reports.cloudflare.net,mailto:Jacorey@dakinghilsman.uk"
+*._domainkey.dakinghilsman.uk.	1	IN	TXT	"v=DKIM1; p="
